@@ -18,8 +18,8 @@ const HomePage: React.FC = () => {
         <Benefits />
 
         <Section
-          id="pricing"
-          title="Pricing"
+          id="products"
+          title="Sản Phẩm"
           description="Simple, transparent pricing. No surprises."
         >
           <Pricing />
@@ -36,7 +36,7 @@ const HomePage: React.FC = () => {
         <FAQ />
 
         <Stats />
-        
+
         <CTA />
       </Container>
     </>
