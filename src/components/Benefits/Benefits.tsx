@@ -5,7 +5,9 @@ import { benefits } from "@/data/benefits";
 const Benefits: React.FC = () => {
   return (
     <div id="about">
-      <h2 className="sr-only">Features</h2>
+      <h2 className="text-center mb-4 text-3xl lg:text-5xl lg:leading-tight font-bold">
+        Giới thiệu
+      </h2>
       {benefits.map((item, index) => {
         return (
           <BenefitSection
