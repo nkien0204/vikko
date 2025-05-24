@@ -1,37 +1,85 @@
 import { IPricing } from "@/types";
 
 export const tiers: IPricing[] = [
-    {
-        name: 'Starter',
-        price: 29,
-        features: [
-            'Basic cloud integration',
-            'Up to 5 team members',
-            '20GB storage',
-            'Email support',
-        ],
-    },
-    {
-        name: 'Pro',
-        price: 99,
-        features: [
-            'Advanced cloud integration',
-            'Up to 20 team members',
-            '100GB storage',
-            'Priority email & phone support',
-            'Advanced analytics',
-        ],
-    },
-    {
-        name: 'Enterprise',
-        price: 'Custom',
-        features: [
-            'Full cloud integration',
-            'Unlimited team members',
-            'Unlimited storage',
-            '24/7 dedicated support',
-            'Custom solutions',
-            'On-site training',
-        ],
-    },
-]
+  {
+    name: "Sơn Vikko",
+    price: 29,
+    features: [
+      "Basic cloud integration",
+      "Up to 5 team members",
+      "20GB storage",
+      "Email support",
+    ],
+    imageSrc: "/images/son_vikko2.jpg",
+    width: 200,
+  },
+  {
+    name: "Phụ gia xây dựng",
+    price: 99,
+    features: [
+      "Advanced cloud integration",
+      "Up to 20 team members",
+      "100GB storage",
+      "Priority email & phone support",
+      "Advanced analytics",
+    ],
+    imageSrc: "/images/phu_gia_xay_dung3.png",
+    width: 200,
+  },
+  {
+    name: "Chống thấm đàn hồi",
+    price: "Custom",
+    features: [
+      "Full cloud integration",
+      "Unlimited team members",
+      "Unlimited storage",
+      "24/7 dedicated support",
+      "Custom solutions",
+      "On-site training",
+    ],
+    imageSrc: "/images/chong_tham_dan_hoi.jpg",
+    width: 200,
+  },
+  {
+    name: "Vữa xoa tường V01",
+    price: "Custom",
+    features: [
+      "Full cloud integration",
+      "Unlimited team members",
+      "Unlimited storage",
+      "24/7 dedicated support",
+      "Custom solutions",
+      "On-site training",
+    ],
+    imageSrc: "/images/vua_xoa_tuong_v01.jpg",
+    width: 200,
+  },
+  {
+    name: "Vữa xoa tường V02",
+    price: "Custom",
+    features: [
+      "Full cloud integration",
+      "Unlimited team members",
+      "Unlimited storage",
+      "24/7 dedicated support",
+      "Custom solutions",
+      "On-site training",
+    ],
+    imageSrc: "/images/vua_xoa_tuong.png",
+    width: 200,
+  },
+  {
+    name: "Keo dán gạch",
+    price: "Custom",
+    features: [
+      "Full cloud integration",
+      "Unlimited team members",
+      "Unlimited storage",
+      "24/7 dedicated support",
+      "Custom solutions",
+      "On-site training",
+    ],
+    imageSrc: "/images/keo_dan_gach.jpg",
+    width: 200,
+  },
+];

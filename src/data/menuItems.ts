@@ -14,8 +14,8 @@ export const menuItems: IMenuItem[] = [
     url: "#products",
   },
   {
-    text: "Hệ thống phân phối",
-    url: "#distribution",
+    text: "Dự án",
+    url: "#projects",
   },
   {
     text: "Liên hệ",

@@ -17,18 +17,14 @@ const HomePage: React.FC = () => {
       <Container>
         <Benefits />
 
-        <Section
-          id="products"
-          title="Sản Phẩm"
-          description="Simple, transparent pricing. No surprises."
-        >
+        <Section id="products" title="Sản Phẩm" description="">
           <Pricing />
         </Section>
 
         <Section
-          id="testimonials"
-          title="What Our Clients Say"
-          description="Hear from those who have partnered with us."
+          id="projects"
+          title="Các dự án tiêu biểu"
+          description="Được sự tin dùng của quý khách hàng, Sơn VIKO đã đến được vơi nhiều dự án, công trình lớn – nhỏ trên khắp cả nước Việt Nam."
         >
           <Testimonials />
         </Section>
