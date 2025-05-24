@@ -22,6 +22,7 @@ export interface IPricing {
   features: string[];
   imageSrc: string;
   width: number;
+  highlight: boolean;
 }
 
 export interface IFAQ {

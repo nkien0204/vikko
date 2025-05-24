@@ -16,7 +16,7 @@ export const benefits: IBenefit[] = [
   {
     title: "Đơn vị đi đầu",
     description:
-      "Hưng Thịnh Phát là đơn vị hàng đầu chuyên sản xuất và cung cấp vật liệu xây dựng xanh, thân thiện với môi trường như vữa xoa tường, keo dán gạch đá... với công nghệ hiện đại, đạt chuẩn quốc tế",
+      "VIKKO là đơn vị hàng đầu chuyên sản xuất và cung cấp vật liệu xây dựng xanh, thân thiện với môi trường như vữa xoa tường, keo dán gạch đá... với công nghệ hiện đại, đạt chuẩn quốc tế",
     bullets: [
       {
         title: "Chuỗi cung ứng",
@@ -37,11 +37,11 @@ export const benefits: IBenefit[] = [
         icon: <FiTrendingUp size={26} />,
       },
     ],
-    imageSrc: "/images/vikko-3-copy_5841_HasThumb.jpg",
+    imageSrc: "/images/gioi_thieu.png",
   },
   {
-    title: "Nhà đầu tư tin dùng",
-    description: "Sản phẩm được hàng nghìn chủ thầu trên cả nước tin dùng",
+    title: "Khách hàng tin dùng",
+    description: "Sản phẩm được các chủ thầu trên cả nước tin dùng",
     bullets: [
       {
         title: "Chất lượng được kiểm chứng",
@@ -52,7 +52,7 @@ export const benefits: IBenefit[] = [
       {
         title: "Giới chuyên môn đánh giá cao",
         description:
-          "Sản phẩm được đánh giá cao bởi các chuyên gia trong ngành xây dựng xanh",
+          "VIKKO hoàn toàn đáp ứng được các quy chuẩn kĩ thuật và được công nhận bởi ISOCERT",
         icon: <FiBriefcase size={26} />,
       },
       {
@@ -62,7 +62,7 @@ export const benefits: IBenefit[] = [
         icon: <FiPieChart size={26} />,
       },
     ],
-    imageSrc: "/images/son_vikko.jpeg",
+    imageSrc: "/images/chung_nhan.png",
   },
   {
     title: "Nhân sự chất lượng cao",

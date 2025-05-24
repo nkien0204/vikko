@@ -6,7 +6,7 @@ const Pricing: React.FC = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       {tiers.map((tier) => (
-        <PricingColumn key={tier.name} tier={tier} highlight={true} />
+        <PricingColumn key={tier.name} tier={tier} highlight={tier.highlight} />
       ))}
     </div>
   );

@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
           </p>
         </div>
       </section>
-      <div className="mb-16">
+      <div className="mb-16 relative h-auto">
         <Slider {...settings}>
           <Image
             key={"0"}
@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
             width={width}
             height={10}
             quality={100}
-            sizes="100vw"
+            // sizes="100vw"
             priority={true}
             unoptimized={true}
             alt="app mockup"

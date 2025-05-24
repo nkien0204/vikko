@@ -15,10 +15,17 @@ const PricingColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
   return (
     <div
       className={clsx(
-        "w-full max-w-sm mx-auto bg-white rounded-xl border border-gray-200 lg:max-w-full",
-        { "shadow-lg": highlight },
+        "w-full max-w-sm mx-auto bg-white rounded-xl border border-gray-200 lg:max-w-full relative",
+        {
+          "shadow-lg": highlight,
+        },
       )}
     >
+      {highlight && (
+        <span className="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow z-20">
+          Nổi bật
+        </span>
+      )}
       <div className="p-5 border-b border-gray-200 rounded-t-xl">
         <h3 className="text-xl font-semibold mb-2 text-center">{name}</h3>
         {/* <p className="text-3xl md:text-5xl font-bold mb-6">
@@ -35,9 +42,7 @@ const PricingColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
         <Image
           key={"0"}
           src={imageSrc}
-          // fill={true}
           quality={100}
-          // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           width={width}
           height={200}
           priority={true}
