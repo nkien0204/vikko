@@ -84,10 +84,10 @@ export const benefits: IBenefit[] = [
       {
         title: "Thương hiệu được khẳng định",
         description:
-          "Thương hiệu Hưng Thịnh Phát ngày càng được khẳng định, trở thành đối tác đáng tin cậy của nhiều công trình",
+          "Thương hiệu VIKKO ngày càng được khẳng định, trở thành đối tác đáng tin cậy của nhiều công trình",
         icon: <FiShield size={26} />,
       },
     ],
-    imageSrc: "/images/chong_tham_vikko.jpeg",
+    imageSrc: "/images/nhan_luc.jpg",
   },
 ];

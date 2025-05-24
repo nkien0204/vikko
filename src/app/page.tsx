@@ -1,13 +1,13 @@
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing/Pricing";
-import FAQ from "@/components/FAQ";
+// import FAQ from "@/components/FAQ";
 // import Logos from "@/components/Logos";
 import Benefits from "@/components/Benefits/Benefits";
 import Container from "@/components/Container";
 import Section from "@/components/Section";
-import Stats from "@/components/Stats";
-import CTA from "@/components/CTA";
+// import Stats from "@/components/Stats";
+// import CTA from "@/components/CTA";
 
 const HomePage: React.FC = () => {
   return (
@@ -21,19 +21,15 @@ const HomePage: React.FC = () => {
           <Pricing />
         </Section>
 
-        <Section
-          id="projects"
-          title="Các dự án tiêu biểu"
-          description="Được sự tin dùng của quý khách hàng, Sơn VIKO đã đến được vơi nhiều dự án, công trình lớn – nhỏ trên khắp cả nước Việt Nam."
-        >
+        <Section id="projects" title="Các dự án tiêu biểu" description="">
           <Testimonials />
         </Section>
 
-        <FAQ />
+        {/* <FAQ /> */}
 
-        <Stats />
+        {/* <Stats /> */}
 
-        <CTA />
+        {/* <CTA /> */}
       </Container>
     </>
   );

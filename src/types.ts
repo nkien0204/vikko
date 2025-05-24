@@ -18,8 +18,6 @@ export interface IBenefitBullet {
 
 export interface IPricing {
   name: string;
-  price: number | string;
-  features: string[];
   imageSrc: string;
   width: number;
   highlight: boolean;
@@ -32,9 +30,10 @@ export interface IFAQ {
 
 export interface ITestimonial {
   name: string;
-  role: string;
-  message: string;
-  avatar: string;
+  imageSrc: string;
+  // role: string;
+  // message: string;
+  // avatar: string;
 }
 
 export interface IStats {

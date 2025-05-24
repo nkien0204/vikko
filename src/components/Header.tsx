@@ -28,7 +28,7 @@ const Header: React.FC = () => {
           </Link>
 
           <span className="manrope text-base font-semibold text-foreground">
-            CÔNG TY CP SẢN XUẤT VÀ KINH DOANH VLXD HƯNG THỊNH PHÁT
+            CÔNG TY CỔ PHẦN SẢN XUẤT VÀ ỨNG DỤNG CÔNG NGHỆ QUANG MINH
           </span>
 
           {/* Desktop Menu */}

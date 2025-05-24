@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { BsFillCheckCircleFill } from "react-icons/bs";
+// import { BsFillCheckCircleFill } from "react-icons/bs";
 import Image from "next/image";
 
 import { IPricing } from "@/types";
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const PricingColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
-  const { name, price, features, imageSrc, width } = tier;
+  const { name, imageSrc, width } = tier;
 
   return (
     <div

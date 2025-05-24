@@ -2,8 +2,8 @@ export const siteDetails = {
   siteName: "VIKKO",
   siteUrl: "https://vikko.vn/",
   metadata: {
-    title: "Công ty cổ phần sản xuất và kinh doanh VLXD Hưng Thịnh Phát",
-    description: "Công ty cổ phần sản xuất và kinh doanh VLXD Hưng Thịnh Phát",
+    title: "CÔNG TY CỔ PHẦN SẢN XUẤT VÀ ỨNG DỤNG CÔNG NGHỆ QUANG MINH",
+    description: "CÔNG TY CỔ PHẦN SẢN XUẤT VÀ ỨNG DỤNG CÔNG NGHỆ QUANG MINH",
   },
   language: "vi-VN",
   locale: "vi-VN",
