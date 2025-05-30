@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 // import { FaFingerprint } from "react-icons/fa";
 import Image from "next/image";
+import { FiMapPin } from "react-icons/fi";
 
 import { siteDetails } from "@/data/siteDetails";
 import { footerDetails } from "@/data/footer";
@@ -10,11 +11,9 @@ import { getPlatformIconByName } from "@/utils";
 const Footer: React.FC = () => {
   return (
     <footer id="contact" className="bg-hero-background text-foreground py-10">
-      <div className="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="max-w-7xl w-full mx-auto px-2 grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
           <Link href="#contact" className="flex items-center gap-2">
-            {/* <FaFingerprint className="min-w-fit w-5 h-5 md:w-7 md:h-7" /> */}
-            {/* }/images/favicon.ico */}
             <Image
               src={"/images/logo.ico"}
               alt="icon"
@@ -32,20 +31,7 @@ const Footer: React.FC = () => {
           </p>
         </div>
         <div>
-          <h4 className="text-lg font-semibold mb-4">Lối tắt</h4>
-          <ul className="text-foreground-accent">
-            {footerDetails.quickLinks.map((link) => (
-              <li key={link.text} className="mb-2">
-                <Link href={link.url} className="hover:text-foreground">
-                  {link.text}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
           <h4 className="text-lg font-semibold mb-4">Liên hệ</h4>
-
           {footerDetails.email && (
             <a
               href={`mailto:${footerDetails.email}`}
@@ -91,27 +77,38 @@ const Footer: React.FC = () => {
             </div>
           )}
         </div>
+        <div>
+          <h4 className="text-lg font-semibold mb-4">Chi nhánh</h4>
+          <div className="mb-2">
+            <div className="flex items-center gap-2 text-foreground-accent">
+              <FiMapPin className="w-4 h-4" />
+              <span className="font-semibold">VIKKO Miền Bắc</span>
+            </div>
+            <span>{footerDetails.address}</span>
+          </div>
+
+          <div className="mb-2">
+            <div className="flex items-center gap-2 text-foreground-accent">
+              <FiMapPin className="w-4 h-4" />
+              <span className="font-semibold">VIKKO Miền Trung</span>
+            </div>
+            <span>{footerDetails.address}</span>
+          </div>
+
+          <div className="mb-2">
+            <div className="flex items-center gap-2 text-foreground-accent">
+              <FiMapPin className="w-4 h-4" />
+              <span className="font-semibold">VIKKO Miền Nam</span>
+            </div>
+            <span>{footerDetails.address}</span>
+          </div>
+        </div>
       </div>
       <div className="mt-8 md:text-center text-foreground-accent px-6">
         <p>
           Copyright &copy; {new Date().getFullYear()} {siteDetails.siteName}.
           All rights reserved.
         </p>
-        {/* <p className="text-sm mt-2 text-gray-500">
-          Made with &hearts; by{" "}
-          <a href="https://nexilaunch.com" target="_blank">
-            Nexi Launch
-          </a>
-        </p>
-        <p className="text-sm mt-2 text-gray-500">
-          UI kit by{" "}
-          <a
-            href="https://ui8.net/youthmind/products/fintech-finance-mobile-app-ui-kit"
-            target="_blank"
-          >
-            Youthmind
-          </a>
-        </p> */}
       </div>
     </footer>
   );
