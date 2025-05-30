@@ -8,7 +8,7 @@ export const footerDetails: {
   socials: ISocials;
   address: string;
 } = {
-  subheading: "Vật liệu xanh – Dựng công trình mơ ước",
+  subheading: "Vật liệu chuẩn – Công trình chất",
   quickLinks: [
     {
       text: "Giới thiệu",
@@ -24,7 +24,7 @@ export const footerDetails: {
     },
   ],
   email: "congtyquangminh20a@gmail.com",
-  telephone: "0988 7766 68 / 0988 7766 86",
+  telephone: "0825-098-189",
   socials: {
     website: "https://vikko.vn",
   },

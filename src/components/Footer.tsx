@@ -78,11 +78,13 @@ const Footer: React.FC = () => {
           )}
         </div>
         <div>
-          <h4 className="text-lg font-semibold mb-4">Chi nhánh</h4>
+          <h4 className="text-lg font-semibold mb-4">
+            Địa chỉ Showroom / Nhà máy
+          </h4>
           <div className="mb-2">
             <div className="flex items-center gap-2 text-foreground-accent">
               <FiMapPin className="w-4 h-4" />
-              <span className="font-semibold">VIKKO Miền Bắc</span>
+              <span className="font-semibold">Trụ sở Miền Bắc</span>
             </div>
             <span>{footerDetails.address}</span>
           </div>
@@ -90,17 +92,9 @@ const Footer: React.FC = () => {
           <div className="mb-2">
             <div className="flex items-center gap-2 text-foreground-accent">
               <FiMapPin className="w-4 h-4" />
-              <span className="font-semibold">VIKKO Miền Trung</span>
+              <span className="font-semibold">Chi nhánh Miền Nam</span>
             </div>
-            <span>{footerDetails.address}</span>
-          </div>
-
-          <div className="mb-2">
-            <div className="flex items-center gap-2 text-foreground-accent">
-              <FiMapPin className="w-4 h-4" />
-              <span className="font-semibold">VIKKO Miền Nam</span>
-            </div>
-            <span>{footerDetails.address}</span>
+            <span>Long Đức 2, Tam Phước, Biên Hoà, Đồng Nai</span>
           </div>
         </div>
       </div>
