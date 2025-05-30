@@ -3,12 +3,12 @@ import Image from "next/image";
 import clsx from "clsx";
 import { motion, Variants } from "framer-motion";
 
-import BenefitBullet from "./BenefitBullet";
+import IntroBullet from "./IntroBullet";
 import SectionTitle from "../SectionTitle";
-import { IBenefit } from "@/types";
+import { IIntroInfo } from "@/types";
 
 interface Props {
-  benefit: IBenefit;
+  benefit: IIntroInfo;
   imageAtRight?: boolean;
 }
 
@@ -46,7 +46,7 @@ export const childVariants = {
   },
 };
 
-const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
+const IntroSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
   const { title, description, imageSrc, bullets } = benefit;
 
   return (
@@ -80,7 +80,7 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
 
             <div className="mx-auto lg:ml-0 w-full">
               {bullets.map((item, index) => (
-                <BenefitBullet
+                <IntroBullet
                   key={index}
                   title={item.title}
                   icon={item.icon}
@@ -113,4 +113,4 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
   );
 };
 
-export default BenefitSection;
+export default IntroSection;

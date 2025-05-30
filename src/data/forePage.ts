@@ -1,4 +1,4 @@
-export const heroDetails = {
+export const forePageDetails = {
   heading: "Vật liệu xanh – Dựng công trình mơ ước",
   subheading:
     "Chuyên sản xuất và cung cấp các loại vật liệu xây dựng xanh, thân thiên với môi trường",

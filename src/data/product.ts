@@ -1,6 +1,6 @@
-import { IPricing } from "@/types";
+import { IProduct } from "@/types";
 
-export const tiers: IPricing[] = [
+export const products: IProduct[] = [
   {
     name: "Vữa xoa tường V01",
     // price: "Custom",

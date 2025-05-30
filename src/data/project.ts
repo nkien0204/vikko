@@ -1,7 +1,7 @@
-import { ITestimonial } from "@/types";
+import { IProject } from "@/types";
 // import { siteDetails } from "./siteDetails";
 
-export const testimonials: ITestimonial[] = [
+export const projects: IProject[] = [
   {
     name: "Ban tôn giáo tỉnh Thái Nguyên",
     imageSrc: "/images/ban_ton_giao.jpg",

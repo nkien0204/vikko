@@ -3,20 +3,20 @@ export interface IMenuItem {
   url: string;
 }
 
-export interface IBenefit {
+export interface IIntroInfo {
   title: string;
   description: string;
   imageSrc: string;
-  bullets: IBenefitBullet[];
+  bullets: IIntroInfoBullet[];
 }
 
-export interface IBenefitBullet {
+export interface IIntroInfoBullet {
   title: string;
   description: string;
   icon: JSX.Element;
 }
 
-export interface IPricing {
+export interface IProduct {
   name: string;
   imageSrc: string;
   width: number;
@@ -28,7 +28,7 @@ export interface IFAQ {
   answer: string;
 }
 
-export interface ITestimonial {
+export interface IProject {
   name: string;
   imageSrc: string;
   // role: string;

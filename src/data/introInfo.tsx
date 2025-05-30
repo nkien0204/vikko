@@ -10,9 +10,9 @@ import {
   FiUserCheck,
 } from "react-icons/fi";
 
-import { IBenefit } from "@/types";
+import { IIntroInfo } from "@/types";
 
-export const benefits: IBenefit[] = [
+export const introInfo: IIntroInfo[] = [
   {
     title: "Đơn vị đi đầu",
     description:

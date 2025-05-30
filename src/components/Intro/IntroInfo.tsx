@@ -1,16 +1,16 @@
-import BenefitSection from "./BenefitSection";
+import IntroSection from "./IntroSection";
 
-import { benefits } from "@/data/benefits";
+import { introInfo } from "@/data/introInfo";
 
-const Benefits: React.FC = () => {
+const IntroComp: React.FC = () => {
   return (
     <div id="about">
       <h2 className="text-center mb-4 text-3xl lg:text-5xl lg:leading-tight font-bold">
         Giới thiệu
       </h2>
-      {benefits.map((item, index) => {
+      {introInfo.map((item, index) => {
         return (
-          <BenefitSection
+          <IntroSection
             key={index}
             benefit={item}
             imageAtRight={index % 2 !== 0}
@@ -21,4 +21,4 @@ const Benefits: React.FC = () => {
   );
 };
 
-export default Benefits;
+export default IntroComp;

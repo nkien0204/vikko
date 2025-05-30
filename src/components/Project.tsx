@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { testimonials } from "@/data/testimonials";
+import { projects } from "@/data/project";
 
-const Testimonials: React.FC = () => {
+const Project: React.FC = () => {
   return (
     <div className="grid gap-14 max-w-lg w-full mx-auto lg:gap-8 lg:grid-cols-3 lg:max-w-full">
-      {testimonials.map((testimonial, index) => (
+      {projects.map((project, index) => (
         <div key={index} className="">
           <div className="flex items-center mb-4 w-full justify-center lg:justify-start">
             {/* <Image
@@ -17,14 +17,14 @@ const Testimonials: React.FC = () => {
                         /> */}
             <div className="ml-4">
               <h3 className="text-lg font-semibold text-secondary">
-                {testimonial.name}
+                {project.name}
               </h3>
               {/* <p className="text-sm text-foreground-accent">{testimonial.role}</p> */}
             </div>
           </div>
           <Image
-            src={testimonial.imageSrc}
-            alt={`${testimonial.name} avatar`}
+            src={project.imageSrc}
+            alt={`${project.name} avatar`}
             width={350}
             height={250}
             className=""
@@ -36,4 +36,4 @@ const Testimonials: React.FC = () => {
   );
 };
 
-export default Testimonials;
+export default Project;

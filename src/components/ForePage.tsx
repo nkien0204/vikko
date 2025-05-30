@@ -6,10 +6,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { heroDetails } from "@/data/hero";
+import { forePageDetails } from "@/data/forePage";
 import { useState, useEffect } from "react";
 
-const Hero: React.FC = () => {
+const ForePage: React.FC = () => {
   const [width, setWidth] = useState(1200); // Default fallback width
 
   useEffect(() => {
@@ -41,10 +41,10 @@ const Hero: React.FC = () => {
       >
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl md:leading-tight font-bold text-foreground mx-auto">
-            {heroDetails.heading}
+            {forePageDetails.heading}
           </h1>
           <p className="mt-4 text-foreground mx-auto">
-            {heroDetails.subheading}
+            {forePageDetails.subheading}
           </p>
         </div>
       </section>
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
         <Slider {...settings}>
           <Image
             key={"0"}
-            src={heroDetails.centerImageSrc[0]}
+            src={forePageDetails.centerImageSrc[0]}
             width={width}
             height={10}
             quality={100}
@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
           />
           <Image
             key={"1"}
-            src={heroDetails.centerImageSrc[1]}
+            src={forePageDetails.centerImageSrc[1]}
             width={width}
             height={10}
             quality={100}
@@ -80,4 +80,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero;
+export default ForePage;

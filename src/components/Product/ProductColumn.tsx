@@ -2,14 +2,14 @@ import clsx from "clsx";
 // import { BsFillCheckCircleFill } from "react-icons/bs";
 import Image from "next/image";
 
-import { IPricing } from "@/types";
+import { IProduct } from "@/types";
 
 interface Props {
-  tier: IPricing;
+  tier: IProduct;
   highlight?: boolean;
 }
 
-const PricingColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
+const ProductColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
   const { name, imageSrc, width } = tier;
 
   return (
@@ -67,4 +67,4 @@ const PricingColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
   );
 };
 
-export default PricingColumn;
+export default ProductColumn;

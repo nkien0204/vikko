@@ -1,9 +1,9 @@
-import Hero from "@/components/Hero";
-import Testimonials from "@/components/Testimonials";
-import Pricing from "@/components/Pricing/Pricing";
+import ForePage from "@/components/ForePage";
+import Project from "@/components/Project";
+import Product from "@/components/Product/Product";
 // import FAQ from "@/components/FAQ";
 // import Logos from "@/components/Logos";
-import Benefits from "@/components/Benefits/Benefits";
+import Intro from "@/components/Intro/IntroInfo";
 import Container from "@/components/Container";
 import Section from "@/components/Section";
 // import Stats from "@/components/Stats";
@@ -12,17 +12,17 @@ import Section from "@/components/Section";
 const HomePage: React.FC = () => {
   return (
     <>
-      <Hero />
+      <ForePage />
       {/* <Logos /> */}
       <Container>
-        <Benefits />
+        <Intro />
 
         <Section id="products" title="Sản Phẩm" description="">
-          <Pricing />
+          <Product />
         </Section>
 
         <Section id="projects" title="Các dự án tiêu biểu" description="">
-          <Testimonials />
+          <Project />
         </Section>
 
         {/* <FAQ /> */}

@@ -7,6 +7,6 @@ export const siteDetails = {
   },
   language: "vi-VN",
   locale: "vi-VN",
-  siteLogo: `${process.env.BASE_PATH || ""}/images/favicon.ico`, // or use a string for the logo e.g. "TechStartup"
+  siteLogo: `${process.env.BASE_PATH || ""}/images/logo.ico`, // or use a string for the logo e.g. "TechStartup"
   googleAnalyticsId: "", // e.g. G-XXXXXXX,
 };
