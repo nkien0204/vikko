@@ -21,6 +21,7 @@ export interface IProduct {
   imageSrc: string;
   width: number;
   highlight: boolean;
+  features?: string[];
 }
 
 export interface IFAQ {

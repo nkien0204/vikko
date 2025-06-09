@@ -33,6 +33,21 @@ body {
   }
 }
 
+/* Modal pop animation for ProductColumn */
+.animate-modal-pop {
+  animation: modal-pop 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes modal-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 .manrope {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
