@@ -2,7 +2,7 @@
 import clsx from "clsx";
 // import { BsFillCheckCircleFill } from "react-icons/bs";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { IProduct } from "@/types";
 
@@ -13,9 +13,19 @@ interface Props {
 
 const ProductColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
   const { name, imageSrc, width, features, briefInfo, description } = tier;
-  // features: SubFeature[] where SubFeature = { title: string, contents: string[] }
-  // briefInfo: string, description: string
   const [showModal, setShowModal] = useState(false);
+
+  // Disable background scroll when modal is open
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showModal]);
 
   return (
     <>
