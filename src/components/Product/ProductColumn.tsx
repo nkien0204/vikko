@@ -12,7 +12,9 @@ interface Props {
 }
 
 const ProductColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
-  const { name, imageSrc, width, features } = tier;
+  const { name, imageSrc, width, features, briefInfo, description } = tier;
+  // features: SubFeature[] where SubFeature = { title: string, contents: string[] }
+  // briefInfo: string, description: string
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -56,8 +58,8 @@ const ProductColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
           onClick={() => setShowModal(false)}
         >
           <div
-            className="relative bg-white rounded-2xl p-8 max-w-lg w-full shadow-2xl border border-gray-200 animate-modal-pop"
-            onClick={e => e.stopPropagation()}
+            className="relative bg-white rounded-2xl p-8 max-w-4xl w-full shadow-2xl border border-gray-200 animate-modal-pop"
+            onClick={(e) => e.stopPropagation()}
           >
             <button
               className="absolute top-3 right-3 text-gray-400 hover:text-primary hover:bg-gray-100 transition-colors rounded-full w-9 h-9 flex items-center justify-center text-2xl"
@@ -66,26 +68,65 @@ const ProductColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
             >
               ×
             </button>
-            <div className="flex flex-col items-center">
-              <h2 className="text-3xl font-extrabold mb-3 text-center text-gray-900">{name}</h2>
-              <div className="w-full flex justify-center mb-5">
-                <Image
-                  src={imageSrc}
-                  quality={100}
-                  width={width}
-                  height={200}
-                  unoptimized={true}
-                  alt="img"
-                  className="rounded-xl shadow-md"
-                />
+            <div className="flex flex-col">
+              <h2 className="text-3xl font-extrabold mb-4 text-left text-gray-900">
+                {name}
+              </h2>
+              <div className="flex flex-row gap-8 items-start">
+                <div className="flex-shrink-0">
+                  <Image
+                    src={imageSrc}
+                    quality={100}
+                    width={340}
+                    height={320}
+                    unoptimized={true}
+                    alt="img"
+                    className="rounded-xl shadow-md object-contain h-[80vh] w-auto"
+                  />
+                </div>
+                <div className="flex flex-col gap-0 w-full max-h-[80vh] overflow-y-auto pr-2">
+                  {(briefInfo || description) && (
+                    <div className="mb-2 sticky top-0 bg-white">
+                      {briefInfo && (
+                        <div className="mb-2 text-lg text-gray-700 font-medium">
+                          {briefInfo}
+                        </div>
+                      )}
+                      {description && (
+                        <div className="mb-4 text-base text-gray-600">
+                          {description}
+                        </div>
+                      )}
+                      <hr className="my-4 border-gray-200" />
+                    </div>
+                  )}
+                  {features && (
+                    <div className="flex flex-col gap-6 w-full">
+                      {features.map(
+                        (
+                          subFeature: { title: string; contents: string[] },
+                          idx: number,
+                        ) => (
+                          <div key={idx}>
+                            <div className="font-semibold text-primary mb-2 text-lg">
+                              {subFeature.title}
+                            </div>
+                            <ul className="list-disc pl-5 space-y-2 text-gray-700 text-left text-base">
+                              {subFeature.contents.map(
+                                (content: string, cidx: number) => (
+                                  <li key={cidx} className="leading-relaxed">
+                                    {content}
+                                  </li>
+                                ),
+                              )}
+                            </ul>
+                          </div>
+                        ),
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
-              {features && (
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 w-full max-w-xs mx-auto">
-                  {features.map((feature: string, idx: number) => (
-                    <li key={idx} className="leading-relaxed">{feature}</li>
-                  ))}
-                </ul>
-              )}
             </div>
           </div>
         </div>

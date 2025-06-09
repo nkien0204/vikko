@@ -21,7 +21,15 @@ export interface IProduct {
   imageSrc: string;
   width: number;
   highlight: boolean;
-  features?: string[];
+  features?: SubFeature[];
+  briefInfo?: string;
+  conclusionInfo: SubFeature;
+  description?: string;
+}
+
+export interface SubFeature {
+  title: string;
+  contents: string[];
 }
 
 export interface IFAQ {
