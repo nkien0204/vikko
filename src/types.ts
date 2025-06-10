@@ -23,13 +23,18 @@ export interface IProduct {
   highlight: boolean;
   features?: SubFeature[];
   briefInfo?: string;
-  conclusionInfo: SubFeature;
+  conclusionInfo?: SubFeature;
   description?: string;
 }
 
 export interface SubFeature {
   title: string;
-  contents: string[];
+  contents: SubFeatureContent[];
+}
+
+export interface SubFeatureContent {
+  content: string;
+  imgSrc?: string;
 }
 
 export interface IFAQ {

@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-import { IProduct } from "@/types";
+import { IProduct, SubFeatureContent } from "@/types";
 
 interface Props {
   tier: IProduct;
@@ -82,8 +82,23 @@ const ProductColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
               <h2 className="text-3xl font-extrabold mb-4 text-left text-gray-900">
                 {name}
               </h2>
-              <div className="flex flex-row gap-8 items-start">
-                <div className="flex-shrink-0">
+              {(briefInfo || description) && (
+                <div className="mb-2 sticky top-0 bg-white">
+                  {briefInfo && (
+                    <div className="mb-2 text-lg text-gray-700 font-medium">
+                      {briefInfo}
+                    </div>
+                  )}
+                  {description && (
+                    <div className="mb-4 text-base text-gray-600">
+                      {description}
+                    </div>
+                  )}
+                  <hr className="my-4 border-gray-200" />
+                </div>
+              )}
+              <div className="flex flex-row  gap-8 max-h-[60vh]">
+                <div className="flex-shrink-0 flex items-center">
                   <Image
                     src={imageSrc}
                     quality={100}
@@ -91,30 +106,18 @@ const ProductColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
                     height={320}
                     unoptimized={true}
                     alt="img"
-                    className="rounded-xl shadow-md object-contain h-[80vh] w-auto"
+                    className="rounded-xl shadow-md object-contain h-[40vh] w-auto"
                   />
                 </div>
-                <div className="flex flex-col gap-0 w-full max-h-[80vh] overflow-y-auto pr-2">
-                  {(briefInfo || description) && (
-                    <div className="mb-2 sticky top-0 bg-white">
-                      {briefInfo && (
-                        <div className="mb-2 text-lg text-gray-700 font-medium">
-                          {briefInfo}
-                        </div>
-                      )}
-                      {description && (
-                        <div className="mb-4 text-base text-gray-600">
-                          {description}
-                        </div>
-                      )}
-                      <hr className="my-4 border-gray-200" />
-                    </div>
-                  )}
+                <div className="flex flex-col gap-0 w-full max-h-[60vh] overflow-y-auto pr-2">
                   {features && (
                     <div className="flex flex-col gap-6 w-full">
                       {features.map(
                         (
-                          subFeature: { title: string; contents: string[] },
+                          subFeature: {
+                            title: string;
+                            contents: SubFeatureContent[];
+                          },
                           idx: number,
                         ) => (
                           <div key={idx}>
@@ -123,9 +126,12 @@ const ProductColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
                             </div>
                             <ul className="list-disc pl-5 space-y-2 text-gray-700 text-left text-base">
                               {subFeature.contents.map(
-                                (content: string, cidx: number) => (
+                                (
+                                  contentObj: SubFeatureContent,
+                                  cidx: number,
+                                ) => (
                                   <li key={cidx} className="leading-relaxed">
-                                    {content}
+                                    {contentObj.content}
                                   </li>
                                 ),
                               )}
