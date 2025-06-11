@@ -159,74 +159,60 @@ export const products: IProduct[] = [
   },
   {
     name: "Keo dán gạch",
-    briefInfo: "HƯỚNG DẪN SỬ DỤNG VỮA XOA TƯỜNG VIKKO V01",
-    conclusionInfo: {
-      title: "KẾT QUẢ KỲ VỌNG SAU KHI THI CÔNG",
-      contents: [
-        {
-          content: "Bề mặt tường phẳng, mịn, dễ sơn phủ",
-        },
-        {
-          content: "Không rạn chân chim, không bong tróc",
-        },
-        {
-          content: "Đảm bảo độ thẩm mỹ & độ bền vượt trội",
-        },
-      ],
-    },
+    briefInfo: "GIỚI THIỆU SẢN PHẨM",
     description:
-      "Để đạt hiệu quả thi công tốt nhất – bề mặt mịn, kết dính cao, lên nước đẹp – vui lòng thực hiện đúng các bước sau:",
+      "Keo Dán Gạch Đá Siêu Bám Dính VIKKO là giải pháp lý tưởng cho các công trình cần độ bám dính cao, đặc biệt là với gạch, đá khổ lớn. Sản phẩm thích hợp sử dụng cho cả nội thất và ngoại thất, đảm bảo độ bền và tính thẩm mỹ vượt trội.",
     features: [
       {
-        title: "BƯỚC 1: CHUẨN BỊ BỀ MẶT TƯỜNG",
+        title: "ƯU ĐIỂM NỔI BẬT",
         contents: [
           {
             content:
-              "Sau khi trát lớp vữa thô (lớp thứ nhất) từ 1–2 ngày, tiến hành vệ sinh lớp bề mặt.",
+              "Độ bám dính siêu cao, phù hợp với gạch/đá kích thước lớn và bề mặt khó thi công.",
           },
           {
             content:
-              "Làm sạch bụi bẩn, dầu mỡ, mảng vữa bong tróc hoặc dị vật trên tường.",
+              "Chống thấm, chống trượt, phù hợp với môi trường ẩm ướt như nhà tắm, bể bơi.",
           },
           {
             content:
-              "Tưới ẩm tường bằng nước trước khi thi công 10–15 phút để tăng độ kết dính và chống hút nước ngược.",
+              "Thi công dễ dàng, rút ngắn thời gian và chi phí nhân công.Tưới ẩm tường bằng nước trước khi thi công 10–15 phút để tăng độ kết dính và chống hút nước ngược.",
+          },
+          {
+            content: "Dùng được cả trong nhà và ngoài trời.",
           },
         ],
       },
       {
-        title: "BƯỚC 2: TRỘN VỮA",
+        title: "ỨNG DỤNG CHUYÊN DỤNG",
         contents: [
           {
-            content: "Trộn vữa với tỉ lệ bao 40kg với 15–16 lít nước sạch.",
+            content: "Ốp gạch, đá khổ lớn",
           },
           {
-            content:
-              "Khuyến khích sử dụng máy khuấy để hỗn hợp đồng đều, mịn, dễ thi công hơn.",
+            content: "Ốp gạch chồng gạch",
           },
           {
-            content:
-              "Trộn trong xô hoặc thùng sạch (không lẫn cát, sỏi, dầu mỡ, cặn xi…).",
+            content: "Ốp lát bể bơi, gạch kính, đá hồ bơi",
           },
         ],
       },
       {
-        title: "BƯỚC 3: THI CÔNG",
+        title: "NGUỒN NGUYÊN LIỆU CAO CẤP",
         contents: [
           {
-            content:
-              "Dùng bay inox hoặc bay nhựa trét vữa lên tường thành lớp mỏng đều, không cần quá dày.",
+            content: "Nguyên liệu nhập khẩu từ Đức (Germany)",
           },
           {
-            content: "Đợi 5–10 phút cho vữa ổn định.",
+            content: "Đảm bảo chất lượng, độ bền cao theo tiêu chuẩn châu Âu.",
           },
+        ],
+      },
+      {
+        title: "QUY CÁCH ĐÓNG GÓI",
+        contents: [
           {
-            content:
-              "Dùng miếng xốp xoa đều tay theo chuyển động tròn để làm phẳng và mịn bề mặt.",
-          },
-          {
-            content:
-              "Sau đó, có thể dùng miếng mút xốp khô (hoặc hơi ẩm) xoa lại lần cuối để loại bỏ cát thừa và tăng độ mịn chuẩn bị cho bước sơn phủ",
+            content: "Khối lượng tịnh: 25kg/bao",
           },
         ],
       },
@@ -246,7 +232,7 @@ export const products: IProduct[] = [
         contents: [
           {
             content: "Sơn bóng ngoại thất cao cấp Vikko",
-            imgSrc: "/images/son_vikko2.jpg",
+            imgSrc: "/images/son_bong_ngoai_that.jpg",
           },
         ],
       },
@@ -255,7 +241,7 @@ export const products: IProduct[] = [
         contents: [
           {
             content: "Sơn bóng nội thất cao cấp Vikko",
-            imgSrc: "/images/son_vikko2.jpg",
+            imgSrc: "/images/son_bong_noi_that.png",
           },
         ],
       },
@@ -264,7 +250,7 @@ export const products: IProduct[] = [
         contents: [
           {
             content: "Sơn chống thấm đa năng Vikko",
-            imgSrc: "/images/son_vikko2.jpg",
+            imgSrc: "/images/son_chong_tham_da_nang.jpg",
           },
         ],
       },
@@ -273,7 +259,7 @@ export const products: IProduct[] = [
         contents: [
           {
             content: "Sơn lót kháng kiềm nội thất Vikko",
-            imgSrc: "/images/son_vikko2.jpg",
+            imgSrc: "/images/son_lot_khang_kiem_noi_that.png",
           },
         ],
       },
@@ -282,7 +268,16 @@ export const products: IProduct[] = [
         contents: [
           {
             content: "Sơn lót kiềm ngoại thất Vikko",
-            imgSrc: "/images/son_vikko2.jpg",
+            imgSrc: "/images/son_lot_kiem_ngoai_that.jpg",
+          },
+        ],
+      },
+      {
+        title: "Vikko Exterior Satin",
+        contents: [
+          {
+            content: "Sơn mịn ngoại thất cao cấp Vikko",
+            imgSrc: "/images/son_min_ngoai_that.png",
           },
         ],
       },
@@ -291,7 +286,7 @@ export const products: IProduct[] = [
         contents: [
           {
             content: "Sơn mịn nội thất cao cấp Vikko",
-            imgSrc: "/images/son_vikko2.jpg",
+            imgSrc: "/images/son_min_noi_that.jpg",
           },
         ],
       },
@@ -300,7 +295,7 @@ export const products: IProduct[] = [
         contents: [
           {
             content: "Sơn siêu bóng ngoại thất cao cấp Vikko",
-            imgSrc: "/images/son_vikko2.jpg",
+            imgSrc: "/images/son_sieu_bong_ngoai_that.jpg",
           },
         ],
       },
@@ -309,7 +304,7 @@ export const products: IProduct[] = [
         contents: [
           {
             content: "Sơn siêu bóng nội thất cao cấp Vikko",
-            imgSrc: "/images/son_vikko2.jpg",
+            imgSrc: "/images/son_sieu_bong_noi_that.jpg",
           },
         ],
       },
@@ -318,7 +313,7 @@ export const products: IProduct[] = [
         contents: [
           {
             content: "Sơn siêu trắng trần Vikko",
-            imgSrc: "/images/son_vikko2.jpg",
+            imgSrc: "/images/son_sieu_trang_tran.jpg",
           },
         ],
       },
@@ -434,74 +429,48 @@ export const products: IProduct[] = [
   },
   {
     name: "Chống thấm đàn hồi",
-    briefInfo: "HƯỚNG DẪN SỬ DỤNG VỮA XOA TƯỜNG VIKKO V01",
-    conclusionInfo: {
-      title: "KẾT QUẢ KỲ VỌNG SAU KHI THI CÔNG",
-      contents: [
-        {
-          content: "Bề mặt tường phẳng, mịn, dễ sơn phủ",
-        },
-        {
-          content: "Không rạn chân chim, không bong tróc",
-        },
-        {
-          content: "Đảm bảo độ thẩm mỹ & độ bền vượt trội",
-        },
-      ],
-    },
+    briefInfo: "GIỚI THIỆU SẢN PHẨM",
     description:
-      "Để đạt hiệu quả thi công tốt nhất – bề mặt mịn, kết dính cao, lên nước đẹp – vui lòng thực hiện đúng các bước sau:",
+      "VIKKO CHỐNG THẤM ĐÀN HỒI là hợp chất chống thấm hai thành phần gốc xi măng – polyme, có độ đàn hồi cao, giúp bảo vệ bề mặt công trình khỏi tác động của nước và điều kiện môi trường khắc nghiệt. Sản phẩm phù hợp với nhiều hạng mục thi công trong nhà và ngoài trời.",
     features: [
       {
-        title: "BƯỚC 1: CHUẨN BỊ BỀ MẶT TƯỜNG",
+        title: "ƯU ĐIỂM NỔI BẬT",
         contents: [
           {
             content:
-              "Sau khi trát lớp vữa thô (lớp thứ nhất) từ 1–2 ngày, tiến hành vệ sinh lớp bề mặt.",
+              "Đàn hồi cao, không nứt gãy khi bề mặt co giãn hoặc rung động.",
           },
           {
             content:
-              "Làm sạch bụi bẩn, dầu mỡ, mảng vữa bong tróc hoặc dị vật trên tường.",
+              "Chống thấm tuyệt vời, ngăn nước hiệu quả cho các công trình ngầm hoặc khu vực thường xuyên ẩm ướt.",
           },
           {
             content:
-              "Tưới ẩm tường bằng nước trước khi thi công 10–15 phút để tăng độ kết dính và chống hút nước ngược.",
+              "Dễ thi công, kết dính tốt với nhiều loại bề mặt (bê tông, vữa, gạch...).",
+          },
+          {
+            content:
+              "Bền vững theo thời gian, chống chịu thời tiết và hóa chất nhẹ.",
           },
         ],
       },
       {
-        title: "BƯỚC 2: TRỘN VỮA",
+        title: "ỨNG DỤNG CHUYÊN DỤNG",
         contents: [
-          {
-            content: "Trộn vữa với tỉ lệ bao 40kg với 15–16 lít nước sạch.",
-          },
-          {
-            content:
-              "Khuyến khích sử dụng máy khuấy để hỗn hợp đồng đều, mịn, dễ thi công hơn.",
-          },
-          {
-            content:
-              "Trộn trong xô hoặc thùng sạch (không lẫn cát, sỏi, dầu mỡ, cặn xi…).",
-          },
+          { content: "Sân thượng, ban công,..." },
+          { content: "Sàn tầng hầm, vách tầng hầm" },
+          { content: "Bể bơi, bể chứa nước sinh hoạt" },
+          { content: "Bể nước cứu hỏa" },
+          { content: "Hồ nuôi sinh vật, hồ trồng cây, tiểu cảnh nước" },
+          { content: "Phòng máy, thang máy, khu kỹ thuật" },
         ],
       },
       {
-        title: "BƯỚC 3: THI CÔNG",
+        title: "TIÊU CHUẨN SẢN XUẤT",
         contents: [
           {
             content:
-              "Dùng bay inox hoặc bay nhựa trét vữa lên tường thành lớp mỏng đều, không cần quá dày.",
-          },
-          {
-            content: "Đợi 5–10 phút cho vữa ổn định.",
-          },
-          {
-            content:
-              "Dùng miếng xốp xoa đều tay theo chuyển động tròn để làm phẳng và mịn bề mặt.",
-          },
-          {
-            content:
-              "Sau đó, có thể dùng miếng mút xốp khô (hoặc hơi ẩm) xoa lại lần cuối để loại bỏ cát thừa và tăng độ mịn chuẩn bị cho bước sơn phủ",
+              "TCCS 36:2023/VIKKO – Quy chuẩn kỹ thuật cơ sở năm 2023 của VIKKO",
           },
         ],
       },

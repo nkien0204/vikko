@@ -2,7 +2,7 @@
 import clsx from "clsx";
 // import { BsFillCheckCircleFill } from "react-icons/bs";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { IProduct, SubFeatureContent } from "@/types";
 
@@ -14,6 +14,52 @@ interface Props {
 const ProductColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
   const { name, imageSrc, width, features, briefInfo, description } = tier;
   const [showModal, setShowModal] = useState(false);
+  const [hoveredContent, setHoveredContent] = useState<{
+    content: string;
+    imgSrc: string;
+  } | null>(null);
+  const [popupPos, setPopupPos] = useState<{ top: number; left: number }>({
+    top: 0,
+    left: 0,
+  });
+  const popupRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const padding = 12; // space from edge
+    const offsetX = 20; // space to right of cursor
+    const offsetY = 0; // align with cursor
+
+    let left = e.clientX + offsetX;
+    let top = e.clientY + offsetY;
+
+    // After popup renders, adjust if needed
+    setTimeout(() => {
+      if (popupRef.current) {
+        const popupRect = popupRef.current.getBoundingClientRect();
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+
+        // If popup overflows right edge
+        if (left + popupRect.width + padding > vw) {
+          left = vw - popupRect.width - padding;
+        }
+        // If popup overflows bottom edge
+        if (top + popupRect.height + padding > vh) {
+          top = vh - popupRect.height - padding;
+        }
+        // If popup overflows top edge
+        if (top < padding) {
+          top = padding;
+        }
+        // If popup overflows left edge
+        if (left < padding) {
+          left = padding;
+        }
+
+        setPopupPos({ top, left });
+      }
+    }, 0);
+  };
 
   // Disable background scroll when modal is open
   useEffect(() => {
@@ -130,12 +176,55 @@ const ProductColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
                                   contentObj: SubFeatureContent,
                                   cidx: number,
                                 ) => (
-                                  <li key={cidx} className="leading-relaxed">
+                                  <li
+                                    key={cidx}
+                                    className={
+                                      "leading-relaxed relative" +
+                                      (contentObj.imgSrc
+                                        ? " cursor-pointer hover:text-blue-400"
+                                        : "")
+                                    }
+                                    onMouseEnter={(e) => {
+                                      if (!contentObj.imgSrc) return;
+                                      setHoveredContent({
+                                        content: contentObj.content,
+                                        imgSrc: contentObj.imgSrc,
+                                      });
+                                      handleMouseMove(e);
+                                    }}
+                                    onMouseMove={(e) => handleMouseMove(e)}
+                                    onMouseLeave={() => setHoveredContent(null)}
+                                  >
                                     {contentObj.content}
                                   </li>
                                 ),
                               )}
                             </ul>
+                            {hoveredContent && (
+                              <div
+                                ref={popupRef}
+                                className="fixed z-50 bg-white border border-gray-300 rounded-lg shadow-lg p-4"
+                                style={{
+                                  top: popupPos.top,
+                                  left: popupPos.left,
+                                  pointerEvents: "none", // So it doesn't interfere with mouse events
+                                  minWidth: 200,
+                                  maxWidth: 320,
+                                }}
+                              >
+                                <div className="font-bold mb-2">
+                                  {hoveredContent.content}
+                                </div>
+                                <Image
+                                  src={hoveredContent.imgSrc}
+                                  alt=""
+                                  width={400}
+                                  height={320}
+                                  className="max-w-full max-h-50 object-contain"
+                                  unoptimized
+                                />
+                              </div>
+                            )}
                           </div>
                         ),
                       )}
