@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { siteDetails } from "@/data/siteDetails";
 
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const manrope = Manrope({ subsets: ["latin"] });
 const sourceSans = Source_Sans_3({ subsets: ["latin"] });
@@ -46,6 +47,7 @@ export default function RootLayout({
       <body
         className={`${manrope.className} ${sourceSans.className} antialiased`}
       >
+        <SpeedInsights />
         {siteDetails.googleAnalyticsId && (
           <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />
         )}
